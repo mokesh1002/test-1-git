@@ -1,0 +1,25 @@
+#Azure provider source and version being used
+terraform {
+    required_providers {
+         Azurerm = {
+	       source = "hashicrop/azurerm"
+	       version = "3.0.0"
+	       }
+	    }
+	 }
+#configure the microsoft azure provider 
+  provider "azurerm" {
+    features{}
+  }
+ #creat a resource group
+  resoure "azure virtual network" = "VNET.ALFA"
+  name = "VNET-HDFC-ALFA"
+  location = "westus"
+#create a virtual network with in the resource group 
+ resource "azurerm_resource_group_VNET_ALFA_name
+ location = azurerm_resource_group_westus3_location
+ address_space = {10.0.0.0/16}
+}
+
+
+
